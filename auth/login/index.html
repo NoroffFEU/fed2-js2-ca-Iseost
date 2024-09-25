@@ -5,24 +5,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="../../src/css/login_register.css">
+    <script type="module" src="../../src/app.js"></script>
   </head>
 
   <body>
-    <h1>Login</h1>
+    <div class="container_login_register">
+    <img class="watercolor_image" src="../../public/images/abstract_watercolour_splatter_design_1407.jpg" alt="watercolor image">
+    <h1>Welcome!</h1>
     <form name="login">
-      <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
+      <div class="login_register_form">
+        <label for="email"></label>
+        <input id="email" type="email" name="email" placeholder="Enter your email address here" required />
       </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required />
+      <div class="login_register_form">
+        <label for="password"></label>
+        <input type="password" name="password" id="password" placeholder="Enter your password here" required />
       </div>
-
-      <a href="/auth/register/">Register</a>
       <button>Login</button>
+      <p>Not registered? <a href="/auth/register/">Register here</a></p>
+    </div>
     </form>
   </body>
 </html>
