@@ -5,15 +5,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="../../src/css/login_register.css">
+    <script type="module" src="../../src/app.js"></script>
   </head>
 
   <body>
-    <h1>Register</h1>
-
+    <div class="container_login_register">
+      <img class="watercolor_image" src="../../public/images/abstract_watercolour_splatter_design_1407.jpg" alt="watercolor image">
+      <h1>Welcome!</h1>
     <form name="register">
-      <div>
-        <label for="name">Name</label>
+      <div id="register_username" class="login_register_form">
+        <label for="name"></label>
         <input
           id="name"
           type="text"
@@ -22,11 +24,12 @@
           maxlength="20"
           pattern="^[\w]+$"
           title="Please enter a username using only letters and numbers"
+          placeholder="Enter your username"
         />
       </div>
 
-      <div>
-        <label for="email">Email</label>
+      <div id="register_email" class="login_register_form">
+        <label for="email"></label>
         <input
           id="email"
           type="email"
@@ -34,22 +37,23 @@
           required
           pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
           title="Please enter a valid noroff.no or stud.noroff.no address"
+          placeholder="Email address"
         />
       </div>
 
-      <div>
-        <label for="password">Password</label>
+      <div id="register_password" class="login_register_form">
+        <label for="password"></label>
         <input
           type="password"
           name="password"
           id="password"
           required
           minlength="8"
+          placeholder="Create a password"
         />
       </div>
-
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
+      <button id="register_button">Register</button>
+      <p>Already registered? <a href="/auth/login/">Login here</a></p>
     </form>
   </body>
 </html>
